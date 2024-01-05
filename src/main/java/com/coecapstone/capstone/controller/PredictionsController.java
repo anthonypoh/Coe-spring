@@ -36,7 +36,7 @@ public class PredictionsController {
 
     String prediction_json = api.fetchDataFromApi(
       String.format(
-        "http://127.0.0.1:5000/api/get-prediction/%d/%s",
+        "https://flask-service.up.railway.app/api/get-prediction/%d/%s",
         quota,
         cat
       )

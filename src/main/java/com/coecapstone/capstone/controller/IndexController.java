@@ -30,11 +30,11 @@ public class IndexController {
     throws JsonMappingException, JsonProcessingException {
     ModelAndView mav = new ModelAndView("index");
     String result_json = api.fetchDataFromApi(
-      String.format("http://127.0.0.1:5000")
+      String.format("https://flask-service.up.railway.app")
     );
 
     String difference_json = api.fetchDataFromApi(
-      "http://127.0.0.1:5000/api/get-difference"
+      "https://flask-service.up.railway.app/api/get-difference"
     );
 
     TypeReference<List<Result>> typeReference = new TypeReference<List<Result>>() {};
